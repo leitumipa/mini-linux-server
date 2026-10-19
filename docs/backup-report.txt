@@ -1,0 +1,25 @@
+MINI LINUX SERVER
+Backup Report
+
+1. Backup Scope
+- Application
+- Configuration
+- Data
+- Application logs
+
+2. Backup Format
+Compressed tar archive (.tar.gz)
+
+3. Destination
+Project-local backups/ directory
+
+4. Verification
+List the backup archive contents with tar -tzf.
+
+5. Limitation
+This is a basic file backup demonstration.
+Production systems may require application-aware backups,
+retention policies, integrity checks, and tested restoration.
+
+6. Result
+Record the actual archive filename and verification result.

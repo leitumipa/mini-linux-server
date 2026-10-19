@@ -1,0 +1,59 @@
+MINI LINUX SERVER ENVIRONMENT REPORT
+====================================
+
+=== Timestamp ===
+2026-10-19T12:15:51+08:00
+
+=== User ===
+leibn
+uid=1000(leibn) gid=1000(leibn) groups=1000(leibn),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users)
+
+=== Distribution ===
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
+
+=== Kernel ===
+Linux Ley 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux
+
+=== Bash ===
+GNU bash, version 5.3.9(1)-release (x86_64-pc-linux-gnu)
+
+=== Python ===
+Python 3.14.4
+/usr/bin/python3
+
+=== PID 1 ===
+systemd
+
+=== systemd ===
+running
+
+=== Disk space ===
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G  2.5G  954G   1% /
+
+=== Memory ===
+               total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       538Mi       7.1Gi       3.5Mi       214Mi       7.1Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+=== TCP listeners ===
+State  Recv-Q Send-Q  Local Address:Port Peer Address:Port
+LISTEN 0      511           0.0.0.0:80        0.0.0.0:*   
+LISTEN 0      4096          0.0.0.0:22        0.0.0.0:*   
+LISTEN 0      4096       127.0.0.54:53        0.0.0.0:*   
+LISTEN 0      1000   10.255.255.254:53        0.0.0.0:*   
+LISTEN 0      4096    127.0.0.53%lo:53        0.0.0.0:*   
+LISTEN 0      511              [::]:80           [::]:*   
+LISTEN 0      4096             [::]:22           [::]:*   

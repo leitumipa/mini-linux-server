@@ -1,0 +1,16 @@
+MINI LINUX SERVER - USER AND GROUP REPORT
+=========================================
+
+2026-10-19T12:24:34+08:00
+
+=== Application User ===
+appsvc:x:997:1009::/home/appsvc:/usr/sbin/nologin
+
+=== Application Group ===
+appteam:x:1009:
+
+=== User Identity ===
+uid=997(appsvc) gid=1009(appteam) groups=1009(appteam)
+
+=== Group Membership ===
+appteam

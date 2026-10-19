@@ -1,0 +1,40 @@
+MINI LINUX SERVER
+Process Troubleshooting Report
+
+1. Objective
+To verify the health of the mini Linux server service,
+its application process, and its HTTP health endpoint.
+
+2. Service
+Unit: mini-linux-server.service
+Service manager: systemd
+
+3. Diagnostic Commands
+- systemctl status mini-linux-server.service --no-pager
+- pgrep -a -u appsvc -f server.py
+- systemctl show -p MainPID --value mini-linux-server.service
+- curl --max-time 5 -i http://127.0.0.1:8080/health
+- sudo journalctl -u mini-linux-server.service -n 20 --no-pager
+
+4. Evidence
+Record the actual results of the diagnostic commands.
+Do not assume that the service is healthy without checking.
+
+5. Analysis
+Compare the systemd service state, process information,
+HTTP response, and journal messages.
+
+A running service does not by itself guarantee that
+the application endpoint is responding correctly.
+
+6. Corrective Action
+No corrective action is recorded unless an actual issue
+is identified and a change is performed.
+
+7. Verification
+Repeat the relevant checks after any corrective action.
+Record the actual service state and HTTP response.
+
+8. Conclusion
+Complete this section using the evidence collected.
+Distinguish confirmed facts from possible explanations.

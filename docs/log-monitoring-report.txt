@@ -1,0 +1,24 @@
+MINI LINUX SERVER
+Log Monitoring Report
+
+1. Application Log
+/srv/mini-linux-server/logs/app.log
+
+2. Systemd Journal
+mini-linux-server.service
+
+3. Monitoring Commands
+sudo tail -n 20 /srv/mini-linux-server/logs/app.log
+sudo grep -E '200|404|500' /srv/mini-linux-server/logs/app.log
+sudo journalctl -u mini-linux-server.service -n 30 --no-pager
+
+4. Test
+Send a request to /health and a request to /not-found.
+
+5. Expected Results
+/health should return HTTP 200.
+/not-found should return HTTP 404.
+
+6. Conclusion
+Record whether the requests appeared in the application log
+and whether the returned HTTP statuses matched expectations.

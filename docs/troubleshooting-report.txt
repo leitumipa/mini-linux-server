@@ -1,0 +1,33 @@
+MINI LINUX SERVER
+Troubleshooting Report
+
+Workflow:
+Symptom -> Evidence -> Hypothesis -> Test ->
+Root Cause -> Fix -> Verify
+
+Test Scenario:
+Request to an unavailable HTTP endpoint.
+
+Expected Behavior:
+The application returns HTTP 404 for the unknown endpoint.
+The health endpoint continues to return HTTP 200.
+
+Evidence:
+- HTTP response from the unknown endpoint
+- Service status
+- Application log
+- Health-check result
+
+Analysis:
+A 404 response indicates that the requested resource
+was not found. It does not by itself indicate service failure.
+
+Corrective Action:
+No service change is required if the application behaves
+as designed and the health endpoint remains operational.
+
+Verification:
+Record the actual results of all checks.
+
+Conclusion:
+Complete using the evidence observed during the test.

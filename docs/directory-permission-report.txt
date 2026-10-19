@@ -1,0 +1,20 @@
+MINI LINUX SERVER - DIRECTORY AND PERMISSION REPORT
+==================================================
+
+2026-10-19T12:38:43+08:00
+
+drwxr-x--- 750 root:appteam /srv/mini-linux-server
+drwxr-x--- 750 appsvc:appteam /srv/mini-linux-server/data
+drwxr-x--- 750 root:appteam /srv/mini-linux-server/backups
+drwxr-x--- 750 appsvc:appteam /srv/mini-linux-server/logs
+drwxr-x--- 750 root:appteam /srv/mini-linux-server/config
+drwxr-x--- 750 root:appteam /srv/mini-linux-server/app
+
+=== Application Read Access ===
+PASS
+
+=== Data Write Access ===
+PASS
+
+=== Application Directory Write Restriction ===
+PASS

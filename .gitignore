@@ -1,0 +1,20 @@
+# Generated log files
+logs/*.log
+
+# Backup archives
+backups/*.tar
+backups/*.tar.gz
+backups/*.tgz
+
+# Python temporary files
+__pycache__/
+*.py[cod]
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and operating system files
+.DS_Store
+Thumbs.db

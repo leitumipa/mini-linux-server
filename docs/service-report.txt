@@ -1,0 +1,35 @@
+MINI LINUX SERVER - SERVICE REPORT
+
+Application:
+- Name: mini-linux-server
+- Language: Python
+- HTTP Port: 8080
+- Bind Address: 127.0.0.1
+
+Systemd Service:
+- Unit: mini-linux-server.service
+- User: appsvc
+- Group: appteam
+- Status: active (running)
+- Startup: enabled
+- Restart Policy: on-failure
+
+Endpoints:
+- GET /       : HTTP 200 OK
+- GET /health : HTTP 200 OK
+- Unknown path: HTTP 404 Not Found
+
+Application Log:
+- /srv/mini-linux-server/logs/app.log
+
+Verification Commands:
+- systemctl status mini-linux-server.service
+- systemctl is-enabled mini-linux-server.service
+- curl -i http://127.0.0.1:8080/
+- curl -i http://127.0.0.1:8080/health
+- journalctl -u mini-linux-server.service
+
+Notes:
+- The application binds to localhost (127.0.0.1).
+- The application runs as a dedicated non-root user.
+- The application log and systemd journal serve different purposes.

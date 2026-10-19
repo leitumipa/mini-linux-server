@@ -1,0 +1,24 @@
+MINI LINUX SERVER
+Automation Report
+
+1. Health Check
+Script: scripts/health_check.sh
+Purpose: Check the local HTTP health endpoint.
+Output: logs/health-check.log
+Exit status: 0 indicates success; nonzero indicates failure.
+
+2. Backup
+Script: scripts/backup.sh
+Purpose: Create and verify a compressed archive.
+Output: backups/
+
+3. Syntax Validation
+bash -n scripts/health_check.sh
+bash -n scripts/backup.sh
+
+4. Verification
+Record actual execution results and generated filenames.
+
+5. Safety
+The health-check script does not restart services.
+The backup script does not delete the original application data.

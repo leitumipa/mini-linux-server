@@ -1,0 +1,33 @@
+MINI LINUX SERVER
+Network Troubleshooting Report
+
+1. Objective
+Verify local network access to the Python HTTP application.
+
+2. Network Configuration
+Application bind address: 127.0.0.1
+Application TCP port: 8080
+Health endpoint: /health
+
+3. Diagnostic Commands
+systemctl is-active mini-linux-server.service
+ip -brief address
+ip route
+sudo ss -lntp
+curl --max-time 5 -i http://127.0.0.1:8080/health
+sudo journalctl -u mini-linux-server.service -n 30 --no-pager
+
+4. Observations
+Record the actual service state, listening socket,
+HTTP response, and relevant log messages.
+
+5. Analysis
+Distinguish service problems, listening-port problems,
+HTTP application problems, and external connectivity problems.
+
+6. Conclusion
+Complete this section using the actual evidence collected.
+
+Note:
+A successful loopback health check does not prove that
+the application is reachable from another computer.

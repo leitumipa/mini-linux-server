@@ -1,0 +1,51 @@
+MINI LINUX SERVER
+Resource Monitoring Report
+
+1. Environment
+- Operating System: Ubuntu Linux on WSL2
+- Application: Python HTTP Server
+- Service: mini-linux-server.service
+- Endpoint: http://127.0.0.1:8080/health
+
+2. Service Status
+- Command: systemctl is-active mini-linux-server.service
+- Result: active
+- Interpretation: The systemd service is running.
+
+3. System Memory
+- Command: free -h
+- Total RAM: 7.6 GiB
+- Used RAM: 560 MiB
+- Free RAM: 6.5 GiB
+- Buffer/Cache: 717 MiB
+- Available RAM: 7.1 GiB
+- Total Swap: 2.0 GiB
+- Used Swap: 0 B
+
+4. Application Process
+- PID: 3664
+- User: appsvc
+- CPU Usage: 0.0%
+- Memory Usage: 0.2%
+- Virtual Memory (VSZ): 32900 KiB
+- Resident Memory (RSS): 22648 KiB
+- Elapsed Time: 08:01
+
+5. Application Health Check
+- Command: curl http://127.0.0.1:8080/health
+- HTTP Status: 200
+- Interpretation: The application responded successfully.
+
+6. Conclusion
+At the time of measurement, the service was active,
+the health endpoint returned HTTP 200, and the system
+reported 7.1 GiB of available memory.
+
+The process CPU and memory values are snapshots and
+may change depending on application activity.
+
+7. Monitoring Commands
+- systemctl is-active mini-linux-server.service
+- free -h
+- ps -p "$(systemctl show -p MainPID --value mini-linux-server.service)" -o pid,user,%cpu,%mem,vsz,rss,etime,cmd
+- curl -sS -o /dev/null -w 'HTTP %{http_code}\n' http://127.0.0.1:8080/health
